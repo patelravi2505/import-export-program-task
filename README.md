@@ -81,11 +81,9 @@ After run tarminal cmd php artisan make:mail ravimail
 
 After the open the mail folder and insert the your blade file name in view
 
- public function content(): Content
-    {
+ public function content(): Content{
         return new Content(
-            view: 'ravi',
-            
+            view: 'ravi'           
         );
     }
 
