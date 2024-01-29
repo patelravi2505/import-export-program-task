@@ -72,3 +72,34 @@ Route::post('import',[Usercontroller::class,'import'])->name('import');
 
 
 
+# email notification 
+
+
+first of all mail trape open and copy to code and set env file
+
+After run tarminal cmd php artisan make:mail ravimail 
+
+After the open the mail folder and insert the your blade file name in view
+
+ public function content(): Content
+    {
+        return new Content(
+            view: 'ravi',
+            
+        );
+    }
+
+Then after create a view file in ravi.blade.php 
+After this blade route create 
+
+route::('ravi','ravi')
+
+Then after open the controller and register code to insert one line 
+
+Mail::to($user['email'])->send(new ravimail());
+
+after the run cmd in php artisan serve 
+And 
+your mail sucessfull send mail trap....
+
+
